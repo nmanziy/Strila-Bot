@@ -306,18 +306,3 @@ while True:
                 user_input = library.get_user_input()
                 break
 
-
-now = datetime.datetime.now()
-
-# Формуємо назву файлу
-filename = f"dialog-{now.strftime('%Y-%m-%d_%H-%M-%S')}.txt"
-
-# Відкриваємо файл на запис та записуємо діалог
-with open(filename, 'w') as file:
-    while True:
-        user_input = input("Введіть ваше повідомлення: ")
-        file.write(f"User: {user_input}\n")
-        # Додатковий код для обробки введеного тексту
-        # ...
-        bot_response = "Відповідь бота"
-        file.write(f"Бот: {bot_response}\n")
